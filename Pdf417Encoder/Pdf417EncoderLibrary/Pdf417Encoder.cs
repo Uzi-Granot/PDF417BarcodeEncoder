@@ -153,7 +153,7 @@ public class Pdf417Encoder
 	/// <summary>
 	/// Version number and date
 	/// </summary>
-	public const string VersionNumber = "Rev 2.0.0 - 2019-05-07";
+	public const string VersionNumber = "Rev 2.1.0 - 2019-05-15";
 
 	/// <summary>
 	/// Data rows
@@ -836,7 +836,7 @@ A * DataColumns**2 + B * DataColumns - C * Total = 0;
 	/// </summary>
 	/// <param name="OutputStream">Output stream</param>
 	/// <param name="Format">Image file format (i.e. PNG, BMP, JPEG)</param>
-	public void SaveBarcodeBitmap
+	public void SaveBarcodeToBitmap
 			(
 			Stream OutputStream,
 			ImageFormat Format

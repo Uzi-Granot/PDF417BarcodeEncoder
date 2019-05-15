@@ -1,7 +1,8 @@
 {
   "profiles": {
     "Pdf417ConsoleDemo": {
-      "commandName": "Project"
+      "commandName": "Project",
+      "commandLineArgs": "-col=4 -t TestFile.txt TestBarcode.png"
     }
   }
 }

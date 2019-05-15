@@ -69,7 +69,6 @@ public partial class SaveImage : Form
 	/// </summary>
 	/// <param name="Pdf417Encoder">Pdf417Encoder class</param>
 	/// <param name="Pdf417BitmapImage">Barcode Bitmap image</param>
-	/// <param name="Pdf417BarcodeMatrix">Barcode black and white matrix</param>
 	public SaveImage
 			(
 			Pdf417Encoder Pdf417Encoder,
@@ -101,7 +100,6 @@ public partial class SaveImage : Form
 		BrushWidthTextBox.Text = ImageSide.ToString();
 		BrushHeightTextBox.Text = ImageSide.ToString();
 		CameraDistanceTextBox.Text = (2 * ImageSide).ToString();
-		ErrorDiameterTextBox.Text = (2 * Pdf417Encoder.NarrowBarWidth).ToString();
 
 		// load image file type combo box
 		foreach(ImageFormat ImageFormat in FileFormat) ImageFormatComboBox.Items.Add(ImageFormat);
@@ -121,7 +119,7 @@ public partial class SaveImage : Form
 
 		// set none error radio button
 		ErrorNoneRadioButton.Checked = true;
-		ErrorDiameterTextBox.Text = Pdf417Encoder.NarrowBarWidth.ToString();;
+		ErrorDiameterTextBox.Text = (2 * Pdf417Encoder.NarrowBarWidth).ToString();
 		ErrorNumberTextBox.Text = "10";
 		return;
 		}
@@ -154,7 +152,7 @@ public partial class SaveImage : Form
 		return;
 		}
 
-	// add background radio button checked
+	// background radio button checked
 	private void OnBackgroundRadioButton(object sender, EventArgs e)
 		{
 		// radio button changed from off to on

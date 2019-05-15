@@ -2,20 +2,27 @@
 
   <PropertyGroup>
     <TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
-    <Version>2.0.0</Version>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>2.1.0</Version>
     <Authors>Uzi Granot</Authors>
     <Company />
-    <Description>PDF 417 Barcode Encoder</Description>
+    <Description>The PDF417 barcode encoder class library is written in C#. It is open source code. The target framework is .NET Framework (net462) and .NET Standard (netstandard2.0). The encoder library allows you to create a PDF417 barcode image from a text string or a binary (byte) array. Two demo/test applications are included. Windows form application and console application targeting .NET framework (net462) and .NET Core (netcoreapp2.2). Both allows you to explore the library and produce PDF417 barcodes.
+
+Both .NET core and .NET standard do not support the Bitmap class included in the System.Drawing assembly. The library includes a PNG image builder that can run in the .NET Standard and .NET core environment. This image is extremely efficient. It takes advantage of the compression and filtering of the PNG standard. Saving barcode image 564 by 232 pixels takes 617 bytes by this software. Using Bitmap with file type PNG takes 16,865. Using Bitmap with file type JPEG takes 21,121 bytes.</Description>
     <Copyright>Copyright (c) 2019 Uzi Granot All rights reserved</Copyright>
     <PackageTags>PDF417 Barcode C# .NetStandard NetFramework</PackageTags>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <PackageLicenseUrl>https://www.codeproject.com/info/cpol10.aspx</PackageLicenseUrl>
     <PackageProjectUrl>https://www.codeproject.com/Articles/1347529/PDF417-Barcode-Encoder-NET-Class-Library-and-Demo</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Uzi-Granot/PDF417BarcodeEncoder</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <Product>PDF417 Barcode Encoder Library</Product>
+    <AssemblyVersion>2.11.0.0</AssemblyVersion>
+    <PackageReleaseNotes>Minor changes to the source code.</PackageReleaseNotes>
   </PropertyGroup>
 
    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile></DocumentationFile>
+    <DocumentationFile>D:\CSharp2017\Pdf417Barcode\Pdf417BarcodeEncoder\Pdf417EncoderLibrary\Pdf417EncoderLibrary.xml</DocumentationFile>
   </PropertyGroup>
 </Project>

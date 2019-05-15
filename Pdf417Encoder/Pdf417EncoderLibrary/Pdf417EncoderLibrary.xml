@@ -1,0 +1,240 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pdf417EncoderLibrary</name>
+    </assembly>
+    <members>
+        <member name="T:Pdf417EncoderLibrary.EncodingControl">
+            <summary>
+            PDF417 Encoding control
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.EncodingControl.Auto">
+            <summary>
+            Auto encoding control
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.EncodingControl.ByteOnly">
+            <summary>
+            Encode all as bytes
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.EncodingControl.TextAndByte">
+            <summary>
+            Encode all as text and bytes
+            </summary>
+        </member>
+        <member name="T:Pdf417EncoderLibrary.ErrorCorrectionLevel">
+            <summary>
+            PDF417 Error correction level
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_0">
+            <summary>
+            Error correction level 0 (2 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_1">
+            <summary>
+            Error correction level 1 (4 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_2">
+            <summary>
+            Error correction level 2 (8 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_3">
+            <summary>
+            Error correction level 3 (16 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_4">
+            <summary>
+            Error correction level 4 (32 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_5">
+            <summary>
+            Error correction level 5 (64 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_6">
+            <summary>
+            Error correction level 6 (128 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_7">
+            <summary>
+            Error correction level 7 (256 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.Level_8">
+            <summary>
+            Error correction level 8 (512 correction codewords)
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.AutoLow">
+            <summary>
+            Recommended level less one
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.AutoNormal">
+            <summary>
+            Recomended level based on number of codewords
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.AutoMedium">
+            <summary>
+            Recommended level plus one
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.ErrorCorrectionLevel.AutoHigh">
+            <summary>
+            Recommended level plus two
+            </summary>
+        </member>
+        <member name="T:Pdf417EncoderLibrary.Pdf417Encoder">
+            <summary>
+            PDF417 Encoder class
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.Pdf417Encoder.VersionNumber">
+            <summary>
+            Version number and date
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.DataRows">
+            <summary>
+            Data rows
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.DataColumns">
+            <summary>
+            Data columns
+            </summary>
+        </member>
+        <member name="F:Pdf417EncoderLibrary.Pdf417Encoder.Pdf417BarcodeMatrix">
+            <summary>
+            Barcode matrix (each bar is one bool item)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.EncodingControl">
+            <summary>
+            Encoding control (Default: Auto)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.ErrorCorrection">
+            <summary>
+            Error correction level (Default: AutoNormal)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.NarrowBarWidth">
+            <summary>
+            Narrow bar width in pixels (Default: 2)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.RowHeight">
+            <summary>
+            Row height in pixels (Default: 6)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.QuietZone">
+            <summary>
+            Quiet zone around the barcode in pixels (Default: 4)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.DefaultDataColumns">
+            <summary>
+            Default number of data columns (Default: 3)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.GlobalLabelIDCharacterSet">
+            <summary>
+            ISO character set ISO-8859-n (n=1 to 9, 13 and 15) (Default: null)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.GlobalLabelIDUserDefined">
+            <summary>
+            Global label ID user defined (Default: 0)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.GlobalLabelIDGeneralPurpose">
+            <summary>
+            Global label ID general purpose (Default: 0)
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.BarColumns">
+            <summary>
+            Returns the barcode width in terms of narrow bars
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.ImageWidth">
+            <summary>
+            Barcode image width in pixels
+            </summary>
+        </member>
+        <member name="P:Pdf417EncoderLibrary.Pdf417Encoder.ImageHeight">
+            <summary>
+            Barcode image height in pixels
+            </summary>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.Encode(System.String)">
+            <summary>
+            Encode unicode string
+            </summary>
+            <param name="StringData">Input text string</param>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.Encode(System.Byte[])">
+            <summary>
+            Encode binary bytes array
+            </summary>
+            <param name="BinaryData">Input binary byte array</param>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.WidthToHeightRatio(System.Double)">
+            <summary>
+            Adjust rows and columns to achive width to height ratio
+            </summary>
+            <param name="Ratio">Requested width to height ratio</param>
+            <returns>Success or failure result</returns>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.SetDataColumns(System.Int32)">
+            <summary>
+            Set number of data columns and data rows 
+            </summary>
+            <param name="DataColumns">Data columns</param>
+            <returns>Success or failure result</returns>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.SetDataRows(System.Int32)">
+            <summary>
+            Set number of data rows and data columns 
+            </summary>
+            <param name="DataRows">Data rowss</param>
+            <returns>Success or failure result</returns>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.SaveBarcodeToPngFile(System.String)">
+            <summary>
+            Save barcode image to PNG file
+            </summary>
+            <param name="FileName">PNG file name</param>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.SaveBarcodeToPngFile(System.IO.Stream)">
+            <summary>
+            Save barcode image to PNG stream
+            </summary>
+            <param name="OutputStream">PNG output stream</param>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.ConvertBarcodeMatrixToPixels">
+            <summary>
+            convert black and white matrix to black and white image
+            </summary>
+            <returns>Black and white image in pixels</returns>
+        </member>
+        <member name="M:Pdf417EncoderLibrary.Pdf417Encoder.CreateBarcodeMatrix">
+            <summary>
+            Create black and white boolean matrix of the barcode image
+            </summary>
+            <returns>Boolean matrix [row, col] true=black, false=white</returns>
+        </member>
+    </members>
+</doc>

@@ -12,8 +12,11 @@ class Program
 		// current directory
 		string CurDir = Environment.CurrentDirectory;
 		int Ptr = CurDir.IndexOf("\\bin\\debug", StringComparison.OrdinalIgnoreCase);
-		string WorkDir = CurDir.Substring(0, Ptr) + "\\Work";
-		if(WorkDir != CurDir && Directory.Exists(WorkDir)) Environment.CurrentDirectory = WorkDir;
+		if(Ptr > 0)
+			{ 
+			string WorkDir = CurDir.Substring(0, Ptr) + "\\Work";
+			if(Directory.Exists(WorkDir)) Environment.CurrentDirectory = WorkDir;
+			}
 		#endif
 
 		try
@@ -30,7 +33,7 @@ class Program
 			}
 
 		#if DEBUG
-		Console.WriteLine("Press any key to close window.");
+		Console.WriteLine("Press any key to close the window.");
 		Console.ReadKey();
 		#endif
 		}
