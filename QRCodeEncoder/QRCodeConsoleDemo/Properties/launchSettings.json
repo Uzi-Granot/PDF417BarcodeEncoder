@@ -1,8 +1,0 @@
-{
-  "profiles": {
-    "QRCodeConsoleDemo": {
-      "commandName": "Project",
-      "commandLineArgs": "-module=6 -error=q -quiet=30 -t TestFile.txt TestFileImage.png"
-    }
-  }
-}
